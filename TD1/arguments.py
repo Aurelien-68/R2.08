@@ -1,4 +1,7 @@
 import sys
-if __name__='__main__'
-    for i in range (len(sys.argv[i])):
-    print(sys.argv[i])
+if __name__ == '__main__':
+    if len(sys.argv)<2:
+        print(f"aucun argument après le nom du script: {sys.argv[0]}")
+    else:
+        for i in range(1,len(sys.argv)):
+            print(f'\t-->{sys.argv[i]}')
