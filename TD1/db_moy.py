@@ -26,6 +26,6 @@ if __name__=='__main__':
         with open(f_path, mode='a', newline="") as fichier_csv:
             writer=csv.writer(fichier_csv)
             writer.writerow([nom, prenom, round(moyenne,1)])
-        print(f"Les notes de {prenom}{nom} ont été enregistrées dans {str(fichier)}")
+        print(f"Les notes de {prenom} {nom} ont été enregistrées dans {str(fichier)}")
     except Exception as e:
         print(f"Erreur:{e}")
