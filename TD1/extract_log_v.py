@@ -34,6 +34,7 @@ if mot_cle not in valid_keywords:
     print("Erreur : Le mot clé doit être ERROR, WARNING ou INFO.")
     exit(1)
 
+
 # Lecture du fichier et comptage des lignes contenant le mot-clé
 compteur = 0
 with log_file.open("r", encoding="utf-8") as f:
