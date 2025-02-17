@@ -2,14 +2,21 @@ import sys
 from pathlib import Path
 
 # Vérification du nombre d'arguments
-if len(sys.argv) < 3 or len(sys.argv) > 4:
-    print("usage : pyhton extract_log_v.py nom_fichier.log mot_cle [-v]")
+if len(sys.argv) < 3:
+    print("usage : extract_log_v.py nom_fichier.log mot_cle [-v]")
     exit(1)
 
 # Récupération des arguments
 log_file = Path(sys.argv[1]).resolve()
 mot_cle = sys.argv[2]
-flag_verbose = len(sys.argv) == 4 and sys.argv[3] == "-v"
+flag_verbose = False
+
+# Vérification du troisième argument facultatif
+if len(sys.argv) == 4:
+    if sys.argv[3] != "-v":
+        print("Erreur : Le troisième argument doit être '-v' pour le mode détaillé.")
+        exit(1)
+    flag_verbose = True
 
 # Vérification de l'existence du fichier
 if not log_file.exists():
@@ -34,7 +41,7 @@ with log_file.open("r", encoding="utf-8") as f:
         if mot_cle in ligne:
             compteur += 1
             if flag_verbose:
-                print(ligne.strip())
+                print(ligne.strip()) #affiche la ligne sans les tab et saut de ligne (/n et /r)
 
 # Affichage du nombre de lignes trouvées
-print(f"Le nombre de lignes contenant {mot_cle} est : {compteur}")
+print(f"Le nombre de lignes contenant '{mot_cle}' est : {compteur}")
