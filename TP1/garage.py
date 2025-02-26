@@ -17,4 +17,8 @@ print(clio.prix_litre)
 print(captur.prix_litre)
 
 co2= clio.calcul_co2(1060)
-print(co2)
+print(f"{co2} kg de CO2")
+
+
+print(clio._id_series)
+print(clio._Voitures__audio_code)
