@@ -6,8 +6,15 @@ print(captur)
 clio=Voitures("Renault","Clio_TCE_100ch", 2018, 17000, "blau nuit", 5.51)
 print(clio)
 
-cons_litre=Voitures.calcul_consommation(clio,1060)
-print(cons_litre)
+cons_litre=clio.calcul_consommation(1060)
+print(f"{cons_litre} L")
 
-prix=Voitures.prix_litre(clio,1060)
-print(prix)
+prix=clio.calcul_prix(1060)
+print(f"{prix} €")
+
+p=clio.modif_prix_litre(5)
+print(clio.prix_litre)
+print(captur.prix_litre)
+
+co2= clio.calcul_co2(1060)
+print(co2)

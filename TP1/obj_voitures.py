@@ -13,9 +13,13 @@ class Voitures():
         return f"Voiture:  {self.marque} {self.modele} - {self.annee} - {self.couleur} - {self.conso } L/100km {self.prix}"
 
     def calcul_consommation(self,distance):
-        litres=(self.conso/100)*distance
-        return f"Pour faire {distance} km la {self.modele} utilise {litres} L"
+        return (self.conso/100)*distance
 
-    def calcul_prix(self,distance):
-        prix=self.prix_litre*Voitures.calcul_consommation(self,distance)
-        return prix
+    def calcul_prix(self,dist):
+        return self.prix_litre * Voitures.calcul_consommation(self,dist)
+
+    def modif_prix_litre(self, prix):
+        self.prix_litre=prix
+
+    def calcul_co2(self,d):
+        return Voitures.calcul_consommation(self,d) *2.3
