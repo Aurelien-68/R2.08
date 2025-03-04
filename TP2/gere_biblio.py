@@ -1,4 +1,4 @@
-from mediatheque import Bibliotheque, Ihm
+ from mediatheque import Bibliotheque, Ihm
 #from obj_bibliotheque import Bibliotheque
 #from obj_ihm import Ihm
 
