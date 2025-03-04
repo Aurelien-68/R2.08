@@ -27,4 +27,4 @@ class Voitures():
     def calcul_co2(self,d):
         return Voitures.calcul_consommation(self,d) *2.3
 
-    def affiche
+
