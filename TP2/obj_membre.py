@@ -3,6 +3,7 @@ from obj_auteur import Auteur
 from obj_livre import Livre
 
 class Membre(Couleur):
+
     nombre_total_membres=0
     def __init__(self, nom, prenom, date_naissance):
         Membre.nombre_total_membres+=1
