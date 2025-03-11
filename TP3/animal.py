@@ -26,7 +26,6 @@ class Oiseau(Animal):
         print(f"Je suis un oiseau de type {self.ordre} et mon envergure est de {self.envergure} cm")
 
 if __name__=="__main__":
-    #animaux = [Animal("Simba", 5), Animal("Beethoven", 3), Animal("César", 26 ), Animal("Dumbo", 1)]
 
     animaux = [Mammifere("Simba", 5, "lion", "poils courts", "fauve clair"),Mammifere("Beethoven", 3, "chien", "poils longs", "blanche & fauve"),Mammifere("César", 26, "singe", "poils courts", "marron"),Mammifere("Dumbo", 1, "éléphanteau", "peau nue", "grise"),Oiseau("Hedwige", 7, "rapace", 90),Oiseau("Blu", 5, "perroquet", 100),Oiseau("Lago", 12, "perroquet", 60),Oiseau("Zazu", 40, "passereau", 40)]
     for animal in animaux:
