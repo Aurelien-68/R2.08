@@ -7,7 +7,7 @@ def affiche_series(liste_ser):
 def compte_serie_par_type(liste, type):
     nb_type=0
     for serie in liste:
-
+        print()
 
 
 
